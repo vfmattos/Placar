@@ -28,31 +28,31 @@
                     <!-- Marcador de Montada player 1 -->
                     <div class="marcador-player1 marcador">
                         <div class="btns">
-                            <button>+</button>
-                            <button>-</button>
+                            <button onclick="player1.mountedIncrement()">+</button>
+                            <button onclick="player1.mountedDecrement()">-</button>
                         </div>
-                        <div class="pontuacao">0</div>
+                        <div class="pontuacao" data-point-mounted="player1">0</div>
                     </div>
                     <!-- Marcador de Passagem player 1 -->
                     <div class="marcador-player1 marcador">
                         <div class="btns">
-                            <button>+</button>
-                            <button>-</button>
+                            <button onclick="player1.guardIncrement()">+</button>
+                            <button onclick="player1.guardDecrement()">-</button>
                         </div>
-                        <div class="pontuacao">0</div>
+                        <div class="pontuacao" data-point-guard="player1">0</div>
                     </div>
                     <!-- Marcador de Queda, Raspagem, Joelho player 1 -->
                     <div class="marcador-player1 marcador">
                         <div class="btns">
-                            <button>+</button>
-                            <button>-</button>
+                            <button onclick="player1.overthrowIncrement()">+</button>
+                            <button onclick="player1.overthrowDecrement()">-</button>
                         </div>
-                        <div class="pontuacao">0</div>
+                        <div class="pontuacao" data-point-overthrow="player1">0</div>
                     </div>
                 </div>
                 <!-- Div Pontuação geral do player 1 -->
                 <div class="pontos-total-player1 pontos-total">
-                    <div>0</div>
+                    <div data-point-total="player1">0</div>
                 </div>
 
             </div>
@@ -61,35 +61,35 @@
             <div class="player2">
                 <!-- Div Pontuação geral do player 2 -->
                 <div class="pontos-total-player2 pontos-total">
-                    <div>0</div>
+                    <div data-point-total="player2">0</div>
                 </div>
                 <!-- Div de Pontuação do player 2 -->
                 <div class="pontos-player2 pontos">
 
                     <!-- Marcador de Montada player 2 -->
                     <div class="marcador-player2 marcador">
-                        <div class="pontuacao">0</div>
+                        <div class="pontuacao" data-point-mounted="player2">0</div>
                         <div class="btns">
-                            <button>+</button>
-                            <button>-</button>
+                            <button onclick="player2.mountedIncrement()">+</button>
+                            <button onclick="player2.mountedDecrement()">-</button>
                         </div>
                     </div>
 
                     <!-- Marcador de Passagem player 2 -->
                     <div class="marcador-player2 marcador">
-                        <div class="pontuacao">0</div>
+                        <div class="pontuacao" data-point-guard="player2">0</div>
                         <div class="btns">
-                            <button>+</button>
-                            <button>-</button>
+                            <button onclick="player2.guardIncrement()">+</button>
+                            <button onclick="player2.guardDecrement()">-</button>
                         </div>
                     </div>
 
                     <!-- Marcador de Queda, Raspagem, Joelho player 2 -->
                     <div class="marcador-player2 marcador">
-                        <div class="pontuacao">0</div>
+                        <div class="pontuacao" data-point-overthrow="player2">0</div>
                         <div class="btns">
-                            <button>+</button>
-                            <button>-</button>
+                            <button onclick="player2.overthrowIncrement()">+</button>
+                            <button onclick="player2.overthrowDecrement()">-</button>
                         </div>
                     </div>
                 </div>
@@ -109,10 +109,10 @@
             <!-- Div vantagem do player 1 -->
             <div class="vantagem-player1 vantagem">
                 <div><h3>Vantagem</h3></div>
-                <div class="marcador-vantagem-player1 marcador-vantagem">0</div>
+                <div class="marcador-vantagem-player1 marcador-vantagem" data-point-advantage="player1">0</div>
                 <div class="crn-btns">
-                    <button>+</button>
-                    <button>-</button>
+                    <button onclick="player1.advantageIncrement()">+</button>
+                    <button onclick="player1.advantageDecrement()">-</button>
                 </div>
                 
             </div>
@@ -122,10 +122,10 @@
                 <div>
                     <h3>Punição</h3>
                 </div>
-                <div class="marcador-punicao-player1 marcador-punicao">0</div>
+                <div class="marcador-punicao-player1 marcador-punicao" data-point-punishment="player1">0</div>
                 <div class="crn-btns">
-                    <button>+</button>
-                    <button>-</button>
+                    <button onclick="player1.punishmentIncrement()">+</button>
+                    <button onclick="player1.punishmentDecrement()">-</button>
                 </div>
             </div>
 
@@ -139,10 +139,10 @@
                 <div>
                     <h3>Punição</h3>
                 </div>
-                <div class="marcador-punicao-player2 marcador-punicao">0</div>
+                <div class="marcador-punicao-player2 marcador-punicao" data-point-punishment="player2">0</div>
                 <div class="crn-btns">
-                    <button>+</button>
-                    <button>-</button>
+                    <button onclick="player2.punishmentIncrement()">+</button>
+                    <button onclick="player2.punishmentDecrement()">-</button>
                 </div>
             </div>
 
@@ -151,19 +151,19 @@
                 <div>
                     <h3>Vantagem</h3>
                 </div>
-                <div class="marcador-vantagem-player2 marcador-vantagem">0</div>
+                <div class="marcador-vantagem-player2 marcador-vantagem" data-point-advantage="player2">0</div>
                 <div class="crn-btns">
-                    <button>+</button>
-                    <button>-</button>
+                    <button onclick="player2.advantageIncrement()">+</button>
+                    <button onclick="player2.advantageDecrement()">-</button>
                 </div>
             </div>
         </section>
 
     </div>
 
-    <!-- <script src="./src/js/player.js"></script>
+    <script src="./src/js/player.js"></script>
     <script src="./src/js/timer.js"></script>
     <script src="./src/js/game.js"></script>
-    <script src="./src/js/refresh-page.js"></script> -->
+    <script src="./src/js/refresh-page.js"></script>
 </body>
 </html>
