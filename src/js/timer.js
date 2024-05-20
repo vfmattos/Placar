@@ -1,10 +1,8 @@
 let timer;
 let timerDisplay = document.getElementById('timer-display');
-let startPauseButton = document.getElementById('startPauseButton');
 let resetButton = document.getElementById('resetButton');
 let setTimeButton = document.getElementById('setTimeButton');
 let buttonsDiv = document.getElementById('timer-controls');
-let menuIcon = document.getElementById('menu-icon');
 
 let originalTime = 0;
 let remainingTime = 0;
@@ -12,21 +10,13 @@ let isTimeSet = false;
 
 
 setTimeButton.addEventListener('click', setTime);
-startPauseButton.addEventListener('click', startPauseTimer);
 resetButton.addEventListener('click', resetTimer);
-
-
-function toggleMenu() {
-  buttonsDiv.style.display = buttonsDiv.style.display === 'none' ? 'block' : 'none';
-}
 
 function startPauseTimer() {
   if (!timer && isTimeSet) { 
     startTimer();
-    startPauseButton.textContent = 'Pause';
   } else if (isTimeSet) { 
     pauseTimer();
-    startPauseButton.textContent = 'Start';
   } else {
     alert("DEFINA O TEMPO ANTES DE COMEÇAR!");
   }
@@ -79,8 +69,6 @@ function resetTimer() {
     let minutes = Math.floor(remainingTime / 60);
     let seconds = remainingTime % 60;
     displayTime(minutes, seconds);
-    startPauseButton.textContent = 'Start';
-    startPauseButton.disabled = true; 
     timerDisplay.style.color = '';
   }
 }
@@ -97,8 +85,7 @@ function setTime() {
     localStorage.setItem('time', originalTime);
     displayTime(minutes, seconds);
     isTimeSet = true;
-    startPauseButton.style.display = 'inline';
-    startPauseButton.disabled = false;
+
     timerDisplay.style.color = '';
   } else {
     alert("DIGITE APENAS NÚMEROS VÁLIDOS PARA MINUTOS E SEGUNDOS!");
@@ -112,7 +99,9 @@ function displayTime(minutes, seconds) {
 }
 
 document.addEventListener('keydown', function(event) {
-  if (event.code === 'Space') {
-    startPauseTimer();
+  if (event.key === ' ') {
+      event.preventDefault(); // Previne o comportamento padrão da tecla espaço
+      // Chama a função desejada aqui
+      startPauseTimer();
   }
 });

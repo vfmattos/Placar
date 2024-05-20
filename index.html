@@ -1,203 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JiuJitsu - Score Board</title>
-  <meta name="keywords"
-    content="jiujitsu, jiu-jitsu, placar, eletrônico, digital, campeonato, CBJJ, CBJJE, luta, arte, macial">
-  <link rel="stylesheet" href="./src/css/themes.css">
-  <link rel="stylesheet" href="./src/css/custom.css">
-  <link rel="stylesheet" href="./src/css/modal.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/themes.css">
+    <link rel="stylesheet" href="./src/css/custom.css">
 </head>
 
 <body>
-  <main>
-    <section>
-      <div class="player1">
-        <!--<div class="atleta-name" data-player-name="player1">Atleta 1</div>-->
-        <div class="points-content">
-          <div class="point-content">
-            <div class="point-title">Montada <br> Pegada nas Costa</div>
-            <div class="point-value" data-point-mounted="player1">0</div>
-            <div class="point-controls">
-              <a class="btn" onclick="player1.mountedDecrement()">-</a>
-              <div class="point-count">4</div>
-              <a class="btn" onclick="player1.mountedIncrement()">+</a>
-            </div>
-          </div>
-
-          <div class="point-content">
-            <div class="point-title">Passagem de Guarda</div>
-            <div class="point-value" data-point-guard="player1">0</div>
-            <div class="point-controls">
-              <a class="btn" onclick="player1.guardDecrement()">-</a>
-              <div class="point-count">3</div>
-              <a class="btn" onclick="player1.guardIncrement()">+</a>
-            </div>
-          </div>
-
-          <div class="point-content">
-            <div class="point-title">Queda <br> Raspagem <br> Joelho na Barriga</div>
-            <div class="point-value" data-point-overthrow="player1">0</div>
-            <div class="point-controls">
-              <a class="btn" onclick="player1.overthrowDecrement()">-</a>
-              <div class="point-count">2</div>
-              <a class="btn" onclick="player1.overthrowIncrement()">+</a>
-            </div>
-          </div>
-
-          <div class="two-point-content">
-            <div class="vantagem">
-              <div class="point-content">
-                <div class="point-title">Vantagem</div>
-                <div class="point-value" data-point-advantage="player1">0</div>
-                <div class="point-controls">
-                  <a class="btn btn-2" onclick="player1.advantageDecrement()">-</a>
-                  <a class="btn btn-2" onclick="player1.advantageIncrement()">+</a>
+    <!--Div Geral-->
+    <div class="app">
+        <!-- Section dos 2 lutadores -->
+        <section class="lutadores">
+            <!-- Div do player 1 -->
+            <div class="player1">
+                <!-- Títulos do player 1 -->
+                <div class="titulos-player1 titulos">
+                    <div>Montada<br>Pegada<br>nas<br>Costas</div>
+                    <div>Passagem<br>de<br>Guarda</div>
+                    <div>Queda<br>Raspagem<br>Joelho na<br>barriga</div>
                 </div>
-              </div>
-            </div>
-
-            <div class="punicao">
-              <div class="point-content">
-                <div class="point-title">Punição</div>
-                <div class="point-value" data-point-punishment="player1">0</div>
-                <div class="point-controls">
-                  <a class="btn btn-2" onclick="player1.punishmentDecrement()">-</a>
-                  <a class="btn btn-2" onclick="player1.punishmentIncrement()">+</a>
+                <!-- Div de pontuações do player 1 -->
+                <div class="pontos-player1 pontos">
+                    <!-- Marcador de Montada player 1 -->
+                    <div class="marcador-player1 marcador">
+                        <div class="btns">
+                            <button onclick="player1.mountedIncrement()">+</button>
+                            <button onclick="player1.mountedDecrement()">-</button>
+                        </div>
+                        <div class="pontuacao" data-point-mounted="player1">0</div>
+                    </div>
+                    <!-- Marcador de Passagem player 1 -->
+                    <div class="marcador-player1 marcador">
+                        <div class="btns">
+                            <button onclick="player1.guardIncrement()">+</button>
+                            <button onclick="player1.guardDecrement()">-</button>
+                        </div>
+                        <div class="pontuacao" data-point-guard="player1">0</div>
+                    </div>
+                    <!-- Marcador de Queda, Raspagem, Joelho player 1 -->
+                    <div class="marcador-player1 marcador">
+                        <div class="btns">
+                            <button onclick="player1.overthrowIncrement()">+</button>
+                            <button onclick="player1.overthrowDecrement()">-</button>
+                        </div>
+                        <div class="pontuacao" data-point-overthrow="player1">0</div>
+                    </div>
                 </div>
-              </div>
+                <!-- Div Pontuação geral do player 1 -->
+                <div class="pontos-total-player1 pontos-total">
+                    <div data-point-total="player1">0</div>
+                </div>
+
             </div>
 
-          </div>
+            <!-- Div do player 2 -->
+            <div class="player2">
+                <!-- Div Pontuação geral do player 2 -->
+                <div class="pontos-total-player2 pontos-total">
+                    <div data-point-total="player2">0</div>
+                </div>
+                <!-- Div de Pontuação do player 2 -->
+                <div class="pontos-player2 pontos">
+
+                    <!-- Marcador de Montada player 2 -->
+                    <div class="marcador-player2 marcador">
+                        <div class="pontuacao" data-point-mounted="player2">0</div>
+                        <div class="btns">
+                            <button onclick="player2.mountedIncrement()">+</button>
+                            <button onclick="player2.mountedDecrement()">-</button>
+                        </div>
+                    </div>
+
+                    <!-- Marcador de Passagem player 2 -->
+                    <div class="marcador-player2 marcador">
+                        <div class="pontuacao" data-point-guard="player2">0</div>
+                        <div class="btns">
+                            <button onclick="player2.guardIncrement()">+</button>
+                            <button onclick="player2.guardDecrement()">-</button>
+                        </div>
+                    </div>
+
+                    <!-- Marcador de Queda, Raspagem, Joelho player 2 -->
+                    <div class="marcador-player2 marcador">
+                        <div class="pontuacao" data-point-overthrow="player2">0</div>
+                        <div class="btns">
+                            <button onclick="player2.overthrowIncrement()">+</button>
+                            <button onclick="player2.overthrowDecrement()">-</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Títulos do player 2 -->
+                <div class="titulos-player2 titulos">
+                    <div>Montada<br>Pegada<br>nas<br>Costas</div>
+                    <div>Passagem<br>de<br>Guarda</div>
+                    <div>Queda<br>Raspagem<br>Joelho na<br>barriga</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section do cronômetro -->
+        <section class="cronometro">
+
+            <!-- Div vantagem do player 1 -->
+            <div class="vantagem-player1 vantagem">
+                <div><h3>Vantagem</h3></div>
+                <div class="marcador-vantagem-player1 marcador-vantagem" data-point-advantage="player1">0</div>
+                <div class="crn-btns">
+                    <button onclick="player1.advantageIncrement()">+</button>
+                    <button onclick="player1.advantageDecrement()">-</button>
+                </div>
+                
+            </div>
+
+            <!-- Div punição do player 1 -->
+            <div class="punicao-player1 punicao">
+                <div>
+                    <h3>Punição</h3>
+                </div>
+                <div class="marcador-punicao-player1 marcador-punicao" data-point-punishment="player1">0</div>
+                <div class="crn-btns">
+                    <button onclick="player1.punishmentIncrement()">+</button>
+                    <button onclick="player1.punishmentDecrement()">-</button>
+                </div>
+            </div>
+
+            <!-- Div do timer -->
+            <div class="timer">
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Configurar
+                  </button>
+                <div id="timer-display">00:00</div>
+            </div>
+
+            <!-- Div punição do player 2 -->
+            <div class="punicao-player2 punicao">
+                <div>
+                    <h3>Punição</h3>
+                </div>
+                <div class="marcador-punicao-player2 marcador-punicao" data-point-punishment="player2">0</div>
+                <div class="crn-btns">
+                    <button onclick="player2.punishmentIncrement()">+</button>
+                    <button onclick="player2.punishmentDecrement()">-</button>
+                </div>
+            </div>
+
+            <!-- Div vantagem do player 2 -->
+            <div class="vantagem-player2 vantagem">
+                <div>
+                    <h3>Vantagem</h3>
+                </div>
+                <div class="marcador-vantagem-player2 marcador-vantagem" data-point-advantage="player2">0</div>
+                <div class="crn-btns">
+                    <button onclick="player2.advantageIncrement()">+</button>
+                    <button onclick="player2.advantageDecrement()">-</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+      <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Configurar Cronômetro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="timer-controls">
+                <a class="btn btn-definir" id="setTimeButton">Definir Tempo</a>
+                <a class="btn btn-resetar" id="resetButton">Reset Tempo</a>
+                <a class="btn btn-resetar" data-game-reset>Reset Placar</a>
+                <p>Aperte a tecla Space (Espaço) do teclado para iniciar ou pausar o cronômetro.</p>
+              </div>
         </div>
       </div>
-
-      <div class="player2">
-        <!--<div class="atleta-name" data-player-name="player2">Atleta 2</div>-->
-        <div class="points-content">
-          <div class="point-content">
-            <div class="point-title">Montada <br> Pegada nas Costa</div>
-            <div class="point-value" data-point-mounted="player2">0</div>
-            <div class="point-controls">
-              <a class="btn btn-2" onclick="player2.mountedDecrement()">-</a>
-              <div class="point-count">4</div>
-              <a class="btn btn-2" onclick="player2.mountedIncrement()">+</a>
-            </div>
-          </div>
-
-          <div class="point-content">
-            <div class="point-title">Passagem de Guarda</div>
-            <div class="point-value" data-point-guard="player2">0</div>
-            <div class="point-controls">
-              <a class="btn btn-2" onclick="player2.guardDecrement()">-</a>
-              <div class="point-count">3</div>
-              <a class="btn btn-2" onclick="player2.guardIncrement()">+</a>
-            </div>
-          </div>
-
-          <div class="point-content">
-            <div class="point-title">Queda <br> Raspagem <br> Joelho na Barriga</div>
-            <div class="point-value" data-point-overthrow="player2">0</div>
-            <div class="point-controls">
-              <a class="btn btn-2" onclick="player2.overthrowDecrement()">-</a>
-              <div class="point-count">2</div>
-              <a class="btn btn-2" onclick="player2.overthrowIncrement()">+</a>
-            </div>
-          </div>
-
-          <div class="two-point-content">
-
-            <div class="vantagem">
-              <div class="point-content">
-                <div class="point-title">Vantagem</div>
-                <div class="point-value" data-point-advantage="player2">0</div>
-                <div class="point-controls">
-                  <a class="btn btn-2" onclick="player2.advantageDecrement()">-</a>
-                  <a class="btn btn-2" onclick="player2.advantageIncrement()">+</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="punicao">
-              <div class="point-content">
-                <div class="point-title">Punição</div>
-                <div class="point-value" data-point-punishment="player2">0</div>
-                <div class="point-controls">
-                  <a class="btn btn-2" onclick="player2.punishmentDecrement()">-</a>
-                  <a class="btn btn-2" onclick="player2.punishmentIncrement()">+</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <sidebar>
-      <div class="total-points player1" data-point-total="player1">0</div>
-      <div class="timer-content">
-        <div class="timer-display" id="timer-display">00:00</div>
-        <div id="menu-icon" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div id="timer-controls">
-          <a class="btn btn-iniciar" id="startPauseButton">Iniciar</a>
-          <a class="btn btn-definir" id="setTimeButton">Definir Tempo</a>
-          <a class="btn btn-resetar" id="resetButton">Reset Tempo</a>
-          <a class="btn btn-resetar" data-game-reset>Reset Placar</a>
-          
-        </div>
-      </div>
-      <div class="total-points player2" data-point-total="player2">0</div>
-    </sidebar>
-
-  </main>
-
-<!--
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h1> Configurar Luta</h1>
-    <form class="form-submit">
-
-      <div class="form-input">
-        <label for="timer">Tempo: <span></span></label>
-        <input type="range" min="0" max="600" step="30" value="0" id="timer">
-      </div>
-
-      <input type="submit" class="btn" value="Configurar">
-    </form>
+    </div>
   </div>
 
-
-
-  <div class="modal-footer">
-    <span>
-      Developed by <a href="https://about.me/geraldo.junior" target="_blank"> Geraldo Júnior</a>
-    </span>
-  </div>
-</div>
--->
-
-
-  <audio controls data-countdown-sound>
-    <source src="./src/audio/323129-Crowd_chants_a_countdown--three-two-one-.mp3" type="audio/mp3">
-    <source src="./src/audio/mixkit-short-race-countdown-926.wav" type="audio/wav">
-    Your browser does not support the audio element.
-  </audio>
-
-  <script src="./src/js/player.js"></script>
-  <script src="./src/js/timer.js"></script>
-  <script src="./src/js/game.js"></script>
-  <script src="./src/js/refresh-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./src/js/player.js"></script>
+    <script src="./src/js/timer.js"></script>
+    <script src="./src/js/game.js"></script>
+    <script src="./src/js/refresh-page.js"></script>
 </body>
-
 </html>
