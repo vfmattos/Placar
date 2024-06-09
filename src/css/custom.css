@@ -623,7 +623,6 @@
   @media(min-width: 1430px){
     .app{
       justify-content: space-around;
-      border: 2px solid blue;
 
     }
 
