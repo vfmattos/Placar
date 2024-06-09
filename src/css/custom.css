@@ -33,7 +33,7 @@
 
   section{
     width:100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
 /* //////////////////////////////////////////////////////////////////// */
@@ -42,7 +42,7 @@
 
   .lutadores{
     display: grid;
-    grid-template-columns:  auto auto;
+    grid-template-columns: auto auto;
   }
 
   /* //////////////////////////////////////////////////////////////////// */
@@ -73,6 +73,7 @@
     font-weight: bold;
     text-align: center;
     font-size: 1.4rem;
+    
   }
 
 /* //////////////////////////////////////////////////////////////////// */
@@ -115,7 +116,7 @@
   .btns{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
   }
 
@@ -157,11 +158,11 @@
     font-weight: bold;
   }
 
-  .pontos-total-player1{
+  .pontos-total-player1 div{
     background-color: var(--p1-primary-color);
   }
 
-  .pontos-total-player2{
+  .pontos-total-player2 div{
     background-color: #FFFF;
   }
 
@@ -212,6 +213,7 @@
     flex-direction: column;
     padding: 40px 30px;
     text-align: center;
+    justify-content: space-evenly;
 }
 
 .vantagem h3, .punicao h3{
@@ -271,4 +273,784 @@
     font-weight: bold;
     color:#FFFF;
   }
+
+/* PEQUENOS NOTEBOOKS */
+  @media(min-width: 780px){
+    .app{
+      justify-content: center;
+      row-gap: 30px;
+    }
+
+    section{
+      margin: 0;
+    }
+
+    .player1{
+      justify-content:flex-end;
+      column-gap: 20px;
+    }
+
+    .player2{
+      justify-content:flex-start;
+      column-gap: 20px;
+    }
+
+    .titulos{
+      justify-content: space-around;
+    }
+
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    .pontos{
+      justify-content: space-around;
+      row-gap:5px;
+    }
+
+    .marcador{
+      padding: 0px;
+      column-gap: 5px;
+    }
+
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 2rem;
+    }
+
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 2rem;
+      color: #000;
+    }
+
+    .btns{
+      gap:2px;
+    }
+
+    .btns button {
+      padding: 5px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .pontos-total-player1 div{
+      font-size: 10rem;
+      padding: 1rem 4rem;
+      background-color: var(--p1-primary-color);
+    }
+
+    .pontos-total-player2 div{
+      font-size: 10rem;
+      padding: 1rem 4rem;
+      background-color: #FFFF;
+    }
+
+    .vantagem{
+      padding: 10px;
+      text-align: center;
+    }
+
+    .punicao{
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    .vantagem h3, .punicao h3{
+      font-size:1.2rem;
+  }
+
+  .marcador-vantagem, .marcador-punicao{
+    font-size: 5rem;
+  }
+
+  .crn-btns button{
+    padding: 7px;
+  }
+
+  .timer div{
+    font-size: 6rem;
+
+  }
+
+  .timer button{
+    padding:3px;
+    font-size:0.7rem;
+  }
+
+  .timer div{
+    font-size: 8rem;
+  }
+  
+  }
+
+  /* ///////////////////////// */
+
+  /* NOTEBOOKS 1024px*/
+  @media(min-width: 1000px){
+    .app{
+      justify-content: space-around;
+      row-gap: 30px;
+    }
+
+    section{
+      margin-top: 1%;
+    }
+
+    .player1{
+      justify-content:space-around;
+      column-gap: 20px;
+    }
+
+    .player2{
+      justify-content:space-around;
+      column-gap: 20px;
+    }
+
+    .titulos{
+      justify-content: space-around;
+    }
+
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .pontos{
+      justify-content: space-around;
+      row-gap:5px;
+    }
+
+    .marcador{
+      padding: 0px;
+      column-gap: 5px;
+    }
+
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 3rem;
+    }
+
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 3rem;
+      color: #000;
+    }
+
+    .btns{
+      gap:2px;
+    }
+
+    .btns button {
+      padding: 5px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .pontos-total-player1 div{
+      font-size: 13rem;
+      padding: 1rem 4rem;
+      background-color: var(--p1-primary-color);
+    }
+
+    .pontos-total-player2 div{
+      font-size: 13rem;
+      padding: 1rem 4rem;
+      background-color: #FFFF;
+    }
+
+    .vantagem{
+      padding: 10px;
+      text-align: center;
+    }
+
+    .punicao{
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    .vantagem h3, .punicao h3{
+      font-size:1.2rem;
+  }
+
+  .marcador-vantagem, .marcador-punicao{
+    font-size: 5rem;
+  }
+
+  .crn-btns button{
+    padding: 7px;
+  }
+
+  .timer div{
+    font-size: 6rem;
+
+  }
+
+  .timer button{
+    padding:3px;
+    font-size:0.7rem;
+  }
+
+  .timer div{
+    font-size: 8rem;
+  }
+  
+  }
+
+  /* ///////////////////////// */
+
+
+/* NOTEBOOKS DE 13 POLEGADAS */
+  @media(min-width: 1275px){
+    .app{
+      justify-content: space-around;
+
+    }
+
+    section{
+      margin-top: 2.2%;
+    }
+
+    .player1{
+      justify-content:space-evenly;
+      column-gap: 20px;
+    }
+
+    .player2{
+      justify-content:space-evenly;
+      column-gap: 20px;
+    }
+
+    .titulos{
+      justify-content: space-around;
+    }
+
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .pontos{
+      justify-content: space-around;
+      row-gap:5px;
+    }
+
+    .marcador{
+      padding: 0px;
+      column-gap: 5px;
+    }
+
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 3rem;
+    }
+
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 3rem;
+      color: #000;
+    }
+
+    .btns{
+      gap:2px;
+    }
+
+    .btns button {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .pontos-total-player1 div{
+      font-size: 12rem;
+      padding: 1rem 6rem;
+      background-color: var(--p1-primary-color);
+    }
+
+    .pontos-total-player2 div{
+      font-size: 12rem;
+      padding: 1rem 6rem;
+      background-color: #FFFF;
+    }
+
+    .vantagem{
+      padding: 10px;
+      text-align: center;
+    }
+
+    .punicao{
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    .vantagem h3, .punicao h3{
+      font-size:1.2rem;
+  }
+
+  .marcador-vantagem, .marcador-punicao{
+    font-size: 5rem;
+  }
+
+  .crn-btns button{
+    padding: 7px;
+  }
+
+  .timer div{
+    font-size: 6rem;
+
+  }
+
+  .timer button{
+    padding:3px;
+    font-size:0.7rem;
+  }
+
+  .timer div{
+    font-size: 8rem;
+  }
+  
+  }
+  /* ///////////////////////// */
+
+  /* NOTEBOOKS DE 15 POLEGADAS */
+  @media(min-width: 1430px){
+    .app{
+      justify-content: space-around;
+      border: 2px solid blue;
+
+    }
+
+    section{
+      margin-top: 2%;
+    }
+
+    .player1{
+      justify-content:space-evenly;
+      column-gap: 20px;
+    }
+
+    .player2{
+      justify-content:space-evenly;
+      column-gap: 20px;
+    }
+
+    .titulos{
+      justify-content: space-evenly;
+    }
+
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.2rem;
+
+      
+    }
+
+    .pontos{
+      justify-content: space-evenly;
+      row-gap:5px;
+    }
+
+    .marcador{
+      padding: 0px;
+      column-gap: 5px;
+    }
+
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 3.2rem;
+    }
+
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 3.2rem;
+      color: #000;
+    }
+
+    .btns{
+      gap:2px;
+    }
+
+    .btns button {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .pontos-total-player1 div{
+      font-size: 14rem;
+      padding: 0 6rem;
+      background-color: var(--p1-primary-color);
+    }
+
+    .pontos-total-player2 div{
+      font-size: 14rem;
+      padding: 0 6rem;
+      background-color: #FFFF;
+    }
+
+    .vantagem{
+      padding: 10px;
+      text-align: center;
+    }
+
+    .punicao{
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    .vantagem h3, .punicao h3{
+      font-size:1.2rem;
+  }
+
+  .marcador-vantagem, .marcador-punicao{
+    font-size: 5rem;
+  }
+
+  .crn-btns button{
+    padding: 7px;
+  }
+
+  .timer div{
+    font-size: 6rem;
+
+  }
+
+  .timer button{
+    padding:3px;
+    font-size:0.7rem;
+  }
+
+  .timer div{
+    font-size: 8rem;
+  }
+  
+  }
+  /* ///////////////////////// */
+
+  /* NOTEBOOKS FULL HD */
+  @media(min-width: 1900px){
+    .app{
+      justify-content: space-around;
+    }
+  
+    section{
+      margin-top: 0.6%; /* Ajustado de 0.5% */
+    }
+  
+    .player1, .player2{
+      justify-content: space-evenly;
+      column-gap: 24px; /* Ajustado de 20px */
+    }
+  
+    .titulos{
+      justify-content: space-evenly;
+    }
+  
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.45rem; /* Ajustado de 1.2rem */
+    }
+  
+    .pontos{
+      justify-content: space-evenly;
+      row-gap: 6px; /* Ajustado de 5px */
+    }
+  
+    .marcador{
+      padding: 0px;
+      column-gap: 6px; /* Ajustado de 5px */
+    }
+  
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 3.9rem; /* Ajustado de 3.2rem */
+    }
+  
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 3.9rem; /* Ajustado de 3.2rem */
+      color: #000;
+    }
+  
+    .btns{
+      gap: 2.4px; /* Ajustado de 2px */
+    }
+  
+    .btns button {
+      padding: 12px; /* Ajustado de 10px */
+      font-weight: bold;
+      font-size: 1.1rem; /* Ajustado de 0.9rem */
+    }
+  
+    .pontos-total-player1 div{
+      font-size: 18.1rem; /* Ajustado de 15rem */
+      padding: 0 7.3rem; /* Ajustado de 0 6rem */
+      background-color: var(--p1-primary-color);
+    }
+  
+    .pontos-total-player2 div{
+      font-size: 18.1rem; /* Ajustado de 15rem */
+      padding: 0 7.3rem; /* Ajustado de 0 6rem */
+      background-color: #FFFF;
+    }
+  
+    .cronometro{
+      justify-content: space-evenly;
+    }
+  
+    .vantagem{
+      padding: 12px 30px; /* Ajustado de 10px 25px */
+      text-align: center;
+    }
+  
+    .punicao{
+      padding: 12px 42px; /* Ajustado de 10px 35px */
+      text-align: center;
+    }
+  
+    .vantagem h3, .punicao h3{
+      font-size: 1.45rem; /* Ajustado de 1.2rem */
+    }
+  
+    .marcador-vantagem, .marcador-punicao{
+      font-size: 7.2rem; /* Ajustado de 6rem */
+    }
+  
+    .crn-btns button{
+      padding: 8.5px; /* Ajustado de 7px */
+    }
+  
+    .timer div{
+      font-size: 9.7rem; /* Ajustado de 8rem */
+    }
+  
+    .timer button{
+      padding: 3.6px; /* Ajustado de 3px */
+      font-size: 0.85rem; /* Ajustado de 0.7rem */
+    }
+  }
+
+/* TV QUAD HD */
+  @media(min-width: 2500px){
+    .app{
+      justify-content: space-around;
+    }
+  
+    section{
+      margin-top: 0.8%; /* Ajustado de 0.5% */
+    }
+  
+    .player1, .player2{
+      justify-content: space-evenly;
+      column-gap: 32px; /* Ajustado de 20px */
+    }
+  
+    .titulos{
+      justify-content: space-evenly;
+    }
+  
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.93rem; /* Ajustado de 1.2rem */
+    }
+  
+    .pontos{
+      justify-content: space-evenly;
+      row-gap: 8px; /* Ajustado de 5px */
+    }
+  
+    .marcador{
+      padding: 0px;
+      column-gap: 8px; /* Ajustado de 5px */
+    }
+  
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 5.2rem; /* Ajustado de 3.2rem */
+    }
+  
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 5.2rem; /* Ajustado de 3.2rem */
+      color: #000;
+    }
+  
+    .btns{
+      gap: 3.2px; /* Ajustado de 2px */
+    }
+  
+    .btns button {
+      padding: 16px; /* Ajustado de 10px */
+      font-weight: bold;
+      font-size: 1.45rem; /* Ajustado de 0.9rem */
+    }
+  
+    .pontos-total-player1 div{
+      font-size: 24.2rem; /* Ajustado de 15rem */
+      padding: 0 9.7rem; /* Ajustado de 0 6rem */
+      background-color: var(--p1-primary-color);
+    }
+  
+    .pontos-total-player2 div{
+      font-size: 24.2rem; /* Ajustado de 15rem */
+      padding: 0 9.7rem; /* Ajustado de 0 6rem */
+      background-color: #FFFF;
+    }
+  
+    .cronometro{
+      justify-content: space-evenly;
+    }
+  
+    .vantagem{
+      padding: 16px 40px; /* Ajustado de 10px 25px */
+      text-align: center;
+    }
+  
+    .punicao{
+      padding: 16px 56px; /* Ajustado de 10px 35px */
+      text-align: center;
+    }
+  
+    .vantagem h3, .punicao h3{
+      font-size: 1.93rem; /* Ajustado de 1.2rem */
+    }
+  
+    .marcador-vantagem, .marcador-punicao{
+      font-size: 9.7rem; /* Ajustado de 6rem */
+    }
+  
+    .crn-btns button{
+      padding: 11.2px; /* Ajustado de 7px */
+    }
+  
+    .timer div{
+      font-size: 12.9rem; /* Ajustado de 8rem */
+    }
+  
+    .timer button{
+      padding: 4.8px; /* Ajustado de 3px */
+      font-size: 1.12rem; /* Ajustado de 0.7rem */
+    }
+  }
+
+  /* TV ULTRA HD 4K */
+
+  @media(min-width: 3840px){
+    .app{
+      justify-content: space-around;
+    }
+  
+    section{
+      margin-top: 1.21%; /* Ajustado de 0.5% */
+    }
+  
+    .player1, .player2{
+      justify-content: space-evenly;
+      column-gap: 48.4px; /* Ajustado de 20px */
+    }
+  
+    .titulos{
+      justify-content: space-evenly;
+    }
+  
+    .titulos div{
+      font-weight: bold;
+      text-align: center;
+      font-size: 2.9rem; /* Ajustado de 1.2rem */
+    }
+  
+    .pontos{
+      justify-content: space-evenly;
+      row-gap: 12.1px; /* Ajustado de 5px */
+    }
+  
+    .marcador{
+      padding: 0px;
+      column-gap: 12.1px; /* Ajustado de 5px */
+    }
+  
+    .marcador-player1 .pontuacao{
+      background-color: var(--p1-primary-color);
+      color: #FFFF;
+      font-size: 7.8rem; /* Ajustado de 3.2rem */
+    }
+  
+    .marcador-player2 .pontuacao{
+      background-color: #FFFF;
+      font-size: 7.8rem; /* Ajustado de 3.2rem */
+      color: #000;
+    }
+  
+    .btns{
+      gap: 4.8px; /* Ajustado de 2px */
+    }
+  
+    .btns button {
+      padding: 24.2px; /* Ajustado de 10px */
+      font-weight: bold;
+      font-size: 2.18rem; /* Ajustado de 0.9rem */
+    }
+  
+    .pontos-total-player1 div{
+      font-size: 36.3rem; /* Ajustado de 15rem */
+      padding: 0 14.52rem; /* Ajustado de 0 6rem */
+      background-color: var(--p1-primary-color);
+    }
+  
+    .pontos-total-player2 div{
+      font-size: 36.3rem; /* Ajustado de 15rem */
+      padding: 0 14.52rem; /* Ajustado de 0 6rem */
+      background-color: #FFFF;
+    }
+  
+    .cronometro{
+      justify-content: space-evenly;
+    }
+  
+    .vantagem{
+      padding: 24.2px 60.5px; /* Ajustado de 10px 25px */
+      text-align: center;
+    }
+  
+    .punicao{
+      padding: 24.2px 84.7px; /* Ajustado de 10px 35px */
+      text-align: center;
+    }
+  
+    .vantagem h3, .punicao h3{
+      font-size: 2.9rem; /* Ajustado de 1.2rem */
+    }
+  
+    .marcador-vantagem, .marcador-punicao{
+      font-size: 14.52rem; /* Ajustado de 6rem */
+    }
+  
+    .crn-btns button{
+      padding: 16.94px; /* Ajustado de 7px */
+    }
+  
+    .timer div{
+      font-size: 19.36rem; /* Ajustado de 8rem */
+    }
+  
+    .timer button{
+      padding: 7.26px; /* Ajustado de 3px */
+      font-size: 1.69rem; /* Ajustado de 0.7rem */
+    }
+  }
+  
+  
   
